@@ -1,2 +1,3 @@
-# none_bot_Real-ESRGAN
-基于nonebot的超分辨率重建
+# nonebot_plugin_RealESRGAN
+
+基于nonebot2的超分辨率重建插件
