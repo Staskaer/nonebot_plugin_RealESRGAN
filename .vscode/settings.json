@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "D:\\python\\python.exe",
+    "python.analysis.extraPaths": [
+        "./src"
+    ]
+}
