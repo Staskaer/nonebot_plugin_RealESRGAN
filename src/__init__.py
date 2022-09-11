@@ -1,4 +1,4 @@
-from utils import *
+from .utils import *
 from nonebot.adapters.onebot.v11 import Message, MessageEvent, MessageSegment, Bot, Event
 from nonebot.params import T_State, State, CommandArg
 from nonebot.plugin import on_command
