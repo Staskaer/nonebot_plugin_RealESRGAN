@@ -2,7 +2,6 @@ from json import loads
 from base64 import b64encode, b64decode
 import aiohttp
 
-
 ######### 实现对图片的base64编码和从返回数据中解析出原始图片 #########
 
 
@@ -29,7 +28,7 @@ def img_encode_to_json(img: bytes, mode="base") -> dict:
 
 def img_decode_from_json(response_str: str) -> bytes:
     '''
-    将返回的json解析处img的base64再解码返回
+    将返回的json解析出img的base64再解码返回
 
     Args:
         response_str (str): 字符串格式的json
@@ -62,7 +61,7 @@ async def get_img(img_url: str) -> bytes:
     return result
 
 
-async def get_result(json_data: dict) -> str:
+async def get_result(json_data: dict, *, api) -> str:
     '''
     来构造请求并获取返回的重建后的图像
 
@@ -94,7 +93,7 @@ async def get_result(json_data: dict) -> str:
     }
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.post('https://hf.space/embed/ppxxxg22/Real-ESRGAN/api/predict/', headers=headers, json=json_data, timeout=120) as resp:
+            async with session.post(api, headers=headers, json=json_data, timeout=120) as resp:
                 result = await resp.text()
         if not result:
             return None

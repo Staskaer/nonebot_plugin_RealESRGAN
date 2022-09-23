@@ -64,6 +64,16 @@ https://github.com/ppxxxg22/nonebot_plugin_RealESRGAN
 
 之后bot会自动返回一张图或者是错误信息。
 
+### 配置项
+
+本插件仅有一个`.env.dev`配置项，即Huggingface的api(如果你是自建的仓库话)。默认不用管。
+
+```
+
+RealESRGAN_API = "https://hf.space/embed/ppxxxg22/Real-ESRGAN/api/predict/"
+
+```
+
 ## 注意事项
 
 - 不要上传过大的图，此插件仅供娱乐，太大的图不仅会导致远程服务器免费额度被大量占用，同时由于压图原因，也不会得到很好的重建结果。**当然如果有这方面的需求，可以去使用[本地程序](docs/原仓库程序的封装及使用.md)，调用本地算力可劲用**。
@@ -75,4 +85,3 @@ https://github.com/ppxxxg22/nonebot_plugin_RealESRGAN
 ## 后续任务
 
 - 修bug(如果有的话)
-- 可以在配置中指定使用的api(没错，目前你就算自建出了api也需要去源码里修改)，~~最近有点忙，希望有大佬提pr。~~
