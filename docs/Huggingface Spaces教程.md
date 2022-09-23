@@ -42,4 +42,12 @@ git push
 
 https://hf.space/embed/{你的id名}/{你的仓库名}/api/predict/
 
-目前需要在源码中替换api，在utils里把get_result函数里面的地址替换掉即可。
+~~目前需要在源码中替换api，在utils里把get_result函数里面的地址替换掉即可。~~
+
+然后在配置项文件`.env.dev`中进行添加
+
+```
+
+RealESRGAN_API = "https://hf.space/embed/{你的id名}/{你的仓库名}/api/predict/"
+
+```
