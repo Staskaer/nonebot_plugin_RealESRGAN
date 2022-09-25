@@ -68,9 +68,10 @@ https://github.com/ppxxxg22/nonebot_plugin_RealESRGAN
 
 本插件仅有一个`.env.dev`配置项，即Huggingface的api(如果你是自建的仓库话)。默认不用管。
 
+
 ```
 
-RealESRGAN_API = "https://hf.space/embed/ppxxxg22/Real-ESRGAN/api/predict/"
+RealESRGAN_API = "https://hf.space/embed/{你的id名}/{你的仓库名}/api/predict/"
 
 ```
 
