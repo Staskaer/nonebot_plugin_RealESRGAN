@@ -20,7 +20,7 @@ real_esrgan = on_command(
 async def real_esrgan_handle_first(
     bot: Bot,
     event: MessageEvent,
-    state: T_State = T_State,
+    state: T_State,
     args: Message = CommandArg(),
 ):
     state['id'] = event.get_user_id()
@@ -33,14 +33,14 @@ async def real_esrgan_handle_first(
 
 
 @real_esrgan.got("mode", prompt="请提供重建模式(二刺螈:anime，其他:base)，模式不绝对，可以任意选", parameterless=[HandleCancellation("已取消")])
-async def real_esrgan_get_mode(event: MessageEvent, state: T_State = T_State):
+async def real_esrgan_get_mode(event: MessageEvent, state: T_State):
     mode = str(state["mode"]).strip()
     if mode not in ["anime", "base"]:
         await real_esrgan.reject('"base" | "anime", 二选一')
 
 
 @real_esrgan.got("img", prompt="请上传需要超分辨率重建的图片", parameterless=[HandleCancellation("已取消")])
-async def real_esrgan_handle_img(event: MessageEvent, state: T_State = T_State):
+async def real_esrgan_handle_img(event: MessageEvent, state: T_State):
     # 先拿到需要转换的图
     for seg in state["img"]:
         if seg.type == "image":
