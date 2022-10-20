@@ -1,53 +1,8 @@
 ## Huggingface Spaces创建自己的API
 
-1. 先去注册一个[账号](https://huggingface.co/)
-2. 把原作者的仓库拉到本地，当然你拉我的也行。
+目前不建议自建api，原因前面也说了。如果你还想自建，查阅官方文档即可。
 
-```
-# 原作者
-git clone https://huggingface.co/spaces/akhaliq/Real-ESRGAN
+https://huggingface.co/docs/hub/repositories-next-steps#duplicating-without-git-history
 
-# 这个是我的
-git clone https://huggingface.co/spaces/ppxxxg22/Real-ESRGAN
 
-```
-3. 新建一个自己的space
-
-![](../imgs/space.png)
-![](../imgs/协议.png)
-
-然后创建仓库
-
-4. 把你的仓库拉到本地
-
-```
-
-git clone https://huggingface.co/spaces/{你的id名}/{你的仓库名}
-
-```
-
-5. 把2中拉下的内容里除了.git文件夹外全部复制并替换掉你在4中拉下来的仓库
-
-6. 把本地仓库推送到远程
-
-```
-
-git add .
-git commit -m "push"
-git push
-
-```
-
-等待远程构建完成，你就得到了你的api地址
-
-https://hf.space/embed/{你的id名}/{你的仓库名}/api/predict/
-
-~~目前需要在源码中替换api，在utils里把get_result函数里面的地址替换掉即可。~~
-
-然后在配置项文件`.env.dev`中进行添加
-
-```
-
-RealESRGAN_API = "https://hf.space/embed/{你的id名}/{你的仓库名}/api/predict/"
-
-```
+**如果你通过查阅git记录的方式并使用了之前的自建api的方式，最好把你的仓库名字设置成一个<u>随机的名字</u>，这样就不会污染搜索列表了**
