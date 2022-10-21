@@ -18,7 +18,7 @@ URL = 'https://github.com/ppxxxg22/nonebot_plugin_RealESRGAN'
 EMAIL = 'liujiaxin011121@gmail.com'
 AUTHOR = 'ppxxxg22'
 REQUIRES_PYTHON = '>=3.7.0'
-VERSION = '0.2.1'
+VERSION = '0.2.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
