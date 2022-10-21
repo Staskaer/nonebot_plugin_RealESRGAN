@@ -28,7 +28,7 @@ async def real_esrgan_handle_first(
         if seg.type == "text":
             state["mode"] = seg.data["text"].strip()
         if seg.type == "image":
-            state['img'] = seg
+            state['img'] = event.message['image']
             break
 
 
