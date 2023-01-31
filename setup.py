@@ -14,11 +14,11 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = 'nonebot_plugin_RealESRGAN'
 DESCRIPTION = '一个基于nonebot2机器人的对图像进行超分辨率重建插件'
-URL = 'https://github.com/ppxxxg22/nonebot_plugin_RealESRGAN'
+URL = 'https://github.com/staskaer/nonebot_plugin_RealESRGAN'
 EMAIL = 'liujiaxin011121@gmail.com'
-AUTHOR = 'ppxxxg22'
+AUTHOR = 'Staskaer'
 REQUIRES_PYTHON = '>=3.7.0'
-VERSION = '0.2.2'
+VERSION = '0.2.5'
 
 # What packages are required for this module to be executed?
 REQUIRED = [

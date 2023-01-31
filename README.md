@@ -28,7 +28,7 @@ nb plugin install nonebot_plugin_RealESRGAN
 先将源代码拉下来
 
 ```
-https://github.com/ppxxxg22/nonebot_plugin_RealESRGAN
+https://github.com/staskaer/nonebot_plugin_RealESRGAN
 ```
 
 这种方式适合想自己做修改，这个项目结构挺简单的，注释也还算全，可以按照自己想要的方式进行修改。
